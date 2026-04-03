@@ -21,7 +21,7 @@ class Clients {
         $cnx = connectionBD::getConnection();
         $req = $cnx->prepare("INSERT INTO clients (nom, prenom, ville) VALUES (:nom, :prenom, :ville)");
         $req->bindParam(':nom',    $this->nom);
-        $req->bindParam(':prenom', $this->prenom);
+        $req->bindParam(':prenom', $this->preenom);
         $req->bindParam(':ville',  $this->ville);
         $req->execute();
     }
